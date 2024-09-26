@@ -1,27 +1,27 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/Header/Header'
-import Footer from'./components/Footer/Footer'
-import UserList from './components/UserList/UserList'
-import data from './assets/people.json'
-
+import {useState} from 'react';
+import './App.css';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import UserList from './components/UserList/UserList';
+import data from './people.json'; 
 
 function App() {
-  const [userData, setUserData] = useState(data)
 
-  return (
-    <div>
-      {/* {Header Component} */}
-      <Header />
+    const [userData, setUserData] = useState(data); 
+    console.log(userData);
+    return (
+      <div>
+  
+        <Header />
+        <Banner />
+      
+        <h1 className='userList'>Welcome to our Team</h1>
+        <UserList userData={userData} />
+        <Footer />
+      </div> 
+  
+    )
+  }
+  
 
-      {/* User List */}
-      <h1>Below is a list of our esteemed users!</h1>
-      <UserList userData={userData} />
-
-      {/* Footer Component */}
-      <Footer />
-    </div>
-  )
-}
-
-export default App
+export default App;
