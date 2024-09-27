@@ -10,12 +10,12 @@ function App() {
     const [userData, setUserData] = useState(data[0].data); 
 
     return (
-      <div>
+      <div className='main'>
   
         <Header />
       
-        <h1 className='userList'>Welcome to our Team</h1>
-        <UserList userData={userData || []} />
+        <h1 className='userList'>Meet our Team</h1>
+        <UserList userData={userData} />
         <Footer />
       </div> 
   

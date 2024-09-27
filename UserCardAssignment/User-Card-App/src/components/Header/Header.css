@@ -1,11 +1,11 @@
 .header-container {
-    background-color: black;
+    background-color:  rgb(48, 5, 104);
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
 }
 
 .header-logo {
-    color: white;
+    color:ghostwhite;
 }
