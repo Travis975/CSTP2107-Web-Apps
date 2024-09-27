@@ -15,7 +15,7 @@ function App() {
         <Header />
       
         <h1 className='userList'>Welcome to our Team</h1>
-        <UserList userData={userData} />
+        <UserList userData={userData || []} />
         <Footer />
       </div> 
   
