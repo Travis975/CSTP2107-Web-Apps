@@ -1,12 +1,8 @@
-import React from "react";
-import UserCard from '../UserCard/UserCard';
+import React from 'react';
+import UserCard from '../UserCard/UserCard.jsx';
 import './UserList.css';
 
 const UserList = ({ userData }) => {
-    // Handle the case where no users exist
-    if (!Array.isArray(userData) || userData.length === 0) {
-        return <p>No users found.</p>; 
-    }
 
     return (
         <div className="user-list">
