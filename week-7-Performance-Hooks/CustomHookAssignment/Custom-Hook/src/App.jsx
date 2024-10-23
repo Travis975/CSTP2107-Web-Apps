@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.js
+import React from 'react';
+import { useLogger } from './useLogger';
+import './App.css';  // Import the CSS file
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    const {
+        scope,
+        handleScopeChange,
+        message,
+        handleMessageChange,
+        logLevel,
+        handleLogLevelChange,
+        consoleLogs,
+        submitLog,
+    } = useLogger();
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    return (
+        <div className="container">
+            <div className="flex-container">
+                <input
+                    type="text"
+                    placeholder="SCOPE"
+                    value={scope}
+                    onChange={handleScopeChange}
+                    className="input-field"
+                />
+                <select value={logLevel} onChange={handleLogLevelChange} className="input-field">
+                    <option value="ERROR">ERROR</option>
+                    <option value="WARN">WARN</option>
+                    <option value="LOG">LOG</option>
+                    <option value="DEBUG">DEBUG</option>
+                </select>
+                <button onClick={submitLog} className="button">Submit</button>
+            </div>
 
-export default App
+            <textarea
+                placeholder="Message"
+                value={message}
+                onChange={handleMessageChange}
+                rows="3"
+                className="input-field"
+            />
+
+            <div className="log-section">
+                <h3>Console Logs</h3>
+                <textarea
+                    value={consoleLogs.join('\n')}
+                    readOnly
+                    rows="10"
+                    className="console"
+                />
+            </div>
+        </div>
+    );
+};
+
+export default App;
