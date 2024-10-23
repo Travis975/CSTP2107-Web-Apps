@@ -1,56 +1,14 @@
 // App.js
 import React from 'react';
-import { useLogger } from './useLogger';
-import './App.css';  // Import the CSS file
+import './App.css'; 
+import Footer from './components/Footer/Footer.jsx'; 
+import Console from './components/Console/Console.jsx'; 
 
 const App = () => {
-    const {
-        scope,
-        handleScopeChange,
-        message,
-        handleMessageChange,
-        logLevel,
-        handleLogLevelChange,
-        consoleLogs,
-        submitLog,
-    } = useLogger();
-
     return (
-        <div className="container">
-            <div className="flex-container">
-                <input
-                    type="text"
-                    placeholder="SCOPE"
-                    value={scope}
-                    onChange={handleScopeChange}
-                    className="input-field"
-                />
-                <select value={logLevel} onChange={handleLogLevelChange} className="input-field">
-                    <option value="ERROR">ERROR</option>
-                    <option value="WARN">WARN</option>
-                    <option value="LOG">LOG</option>
-                    <option value="DEBUG">DEBUG</option>
-                </select>
-                <button onClick={submitLog} className="button">Submit</button>
-            </div>
-
-            <textarea
-                placeholder="Message"
-                value={message}
-                onChange={handleMessageChange}
-                rows="3"
-                className="input-field"
-            />
-
-            <div className="log-section">
-                <h3>Console Logs</h3>
-                <textarea
-                    value={consoleLogs.join('\n')}
-                    readOnly
-                    rows="10"
-                    className="console"
-                />
-            </div>
+        <div className='main'>
+            <Console />
+            <Footer />
         </div>
     );
 };

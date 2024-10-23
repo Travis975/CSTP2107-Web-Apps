@@ -13,7 +13,7 @@ export const useLogger = () => {
 
     const submitLog = () => {
         const timestamp = new Date().toLocaleString();
-        const formattedLog = `[${logLevel}] [${timestamp}] [${scope}] ${message}`;
+        const formattedLog = ` [${scope}] [${timestamp}] ${message}`;
         setConsoleLogs([...consoleLogs, formattedLog]);
 
         // Log to browser's developer console based on the log level
