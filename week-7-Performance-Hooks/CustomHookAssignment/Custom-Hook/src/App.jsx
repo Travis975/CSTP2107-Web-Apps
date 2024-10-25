@@ -1,13 +1,14 @@
-// App.js
 import React from 'react';
-import './App.css'; 
+import './App.css';  
 import Footer from './components/Footer/Footer.jsx'; 
 import Console from './components/Console/Console.jsx'; 
 
 const App = () => {
     return (
         <div className='main'>
-            <Console />
+            <div className='content'>
+                <Console />
+            </div>
             <Footer />
         </div>
     );

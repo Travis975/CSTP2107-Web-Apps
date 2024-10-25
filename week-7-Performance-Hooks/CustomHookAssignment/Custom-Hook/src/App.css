@@ -1,20 +1,17 @@
-/* App.css */
 html, body {
   height: 100%; 
-  margin: 0;    
-  margin: 60px;
+  margin: 0;
 }
 
 .main {
-  display: flex;         
-  flex-direction: column; 
-  min-height: 100vh;   
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
 }
 
-.footer {
-  width: 100%;           
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
+.content {
+  flex: 1;  
+  justify-content: center;  
+  align-items: center;      
+  padding: 20px;
 }

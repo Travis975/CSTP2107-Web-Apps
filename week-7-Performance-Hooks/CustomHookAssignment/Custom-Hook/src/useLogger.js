@@ -1,4 +1,3 @@
-// useLogger.js
 import { useState } from 'react';
 
 export const useLogger = () => {

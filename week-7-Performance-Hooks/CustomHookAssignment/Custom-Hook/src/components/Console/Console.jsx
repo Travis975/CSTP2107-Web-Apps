@@ -1,7 +1,6 @@
-// Console.jsx
 import React from 'react';
-import './Console.css'; // Your styles for this component
-import { useLogger } from '../../useLogger.js'; // Ensure the path is correct
+import './Console.css'; 
+import { useLogger } from '../../useLogger.js'; 
 
 const Console = () => {
     const {
