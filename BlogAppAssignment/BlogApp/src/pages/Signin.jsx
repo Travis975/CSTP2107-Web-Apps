@@ -42,7 +42,6 @@ const SignInPage = () => {
           required
           id="email"
           label="Email"
-          defaultValue=""
           placeholder='Enter your email'
           type='email'
           value={credentials.email}
@@ -55,7 +54,6 @@ const SignInPage = () => {
           required
           id="password"
           label="Password"
-          defaultValue=""
           placeholder='Enter your Password'
           type='password'
           value={credentials.password}

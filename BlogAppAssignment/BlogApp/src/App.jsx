@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ViewBlogsPage from './pages/ViewBlogsPage';
 import ViewBlogDetailsPage from './pages/ViewBlogDetailsPage';
+import FavoritesPage from './pages/FavoritesPage';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -33,9 +34,14 @@ function App() {
       element: <ViewBlogDetailsPage />
     },
     {
+      path: '/favorites',
+      element: <FavoritesPage />
+    },
+    {
       path: "*",
       element: <NotFoundPage />
     }
+
 
   ])
 

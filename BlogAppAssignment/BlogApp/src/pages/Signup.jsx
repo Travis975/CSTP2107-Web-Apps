@@ -28,6 +28,7 @@ const SignupPage = () => {
             }, 2000);
 
         } catch (error) {
+            console.log(error, "this is the error message")
             const message = getErrorCode(error.code);
             setAlertConfig({...alertConfig, message, color: 'error', isOpen: true })
         }
@@ -40,7 +41,6 @@ const SignupPage = () => {
                 required
                 id="email"
                 label="Email"
-                defaultValue=""
                 placeholder='Enter your email'
                 type='email'
                 value={credentials.email}
@@ -53,7 +53,6 @@ const SignupPage = () => {
                 required
                 id="password"
                 label="Password"
-                defaultValue=""
                 placeholder='Enter your Password'
                 type='password'
                 value={credentials.password}
